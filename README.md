@@ -7,5 +7,6 @@
 推廣colab並表達這網站對入手程式碼的方便與入門操作。
 
 # Colab Notebook環境介紹
-連結URL https://colab.research.google.com/ 
+開啟chrome先登入google帳號
 
+進入colab連結URL https://colab.research.google.com/ 
