@@ -13,4 +13,4 @@
 
 出現對話窗如下，
 
-![image]
+![image]https://github.com/linggon-c0der/Google-Colaboratory-Python-/blob/main/202003200701.jpg
