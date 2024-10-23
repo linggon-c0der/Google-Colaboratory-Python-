@@ -10,3 +10,7 @@
 開啟chrome先登入google帳號
 
 進入colab連結URL https://colab.research.google.com/ 
+
+出現對話窗如下，
+
+![image]
