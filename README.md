@@ -2,4 +2,5 @@
 南華大學跨領域-人工智慧期中報告 11218122 李冠霖
 # Colaboratory簡介
 
-此文章在介紹Google Colaboratory的開發環境與解釋下Hello World等級的機器學習操作過程。推廣colab並表達這網站對入手程式碼的方便與入門操作。
+此文章在介紹Google Colaboratory的開發環境與解釋下Hello World等級的機器學習操作過程。
+推廣colab並表達這網站對入手程式碼的方便與入門操作。
