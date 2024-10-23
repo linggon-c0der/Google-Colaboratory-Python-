@@ -7,5 +7,5 @@
 推廣colab並表達這網站對入手程式碼的方便與入門操作。
 
 # Colab Notebook環境介紹
-ㄎ 
+連結URL https://colab.research.google.com/ 
 
