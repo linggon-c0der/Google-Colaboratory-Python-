@@ -136,7 +136,7 @@ uploaded.SetContentString('Sample upload file content 範例')
 uploaded.Upload()
 print('Uploaded file with ID {}'.format(uploaded.get('id')))
 ```
-![image](https://github.com/linggon-c0der/Google-Colaboratory-Python-/blob/main/202003200718.jpg)
+
 
 因為會使用Google Cloud SDK，故執行時也會需要輸入驗證碼，此範例會傳回file ID供後續使用。
 接下來測試列出.txt檔案，因為在同一本notebook，上面的函式庫及參數可以直接應用：
@@ -149,7 +149,9 @@ listed = drive.ListFile({'q': "title contains '.txt' and 'root' in parents"}).Ge
 for file in listed:
   print('title {}, date {}, id {}'.format(file['title'], file['createdDate'], file['id']))
 ```
-(https://github.com/linggon-c0der/Google-Colaboratory-Python-/blob/main/202003200718.jpg)
+
+![image](https://github.com/linggon-c0der/Google-Colaboratory-Python-/blob/main/202003200718.jpg)
+
   接下來測試下載特定檔案：
 
 ```
