@@ -18,3 +18,15 @@
 按下右下角 NEW PYTHON 3 NOTEBOOK，出現如下的cell code區域。
 
 ![image](https://github.com/linggon-c0der/Google-Colaboratory-Python-/blob/main/202003200701.jpg)
+
+點擊 code cell進入編輯模式並貼上這段python程式碼：
+
+import numpy
+import matplotlib.pyplot as plt
+
+x = numpy.random.normal(5.0, 1.0, 100000)
+
+plt.hist(x, 100)
+plt.show()
+
+按下左側執行button 或CTRL+Enter。會看到正態分布直方圖結果如下：
