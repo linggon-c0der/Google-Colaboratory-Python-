@@ -49,6 +49,8 @@ Colab有code IntelliSense功能，以上述範例來說，在前面兩行import�
 
 ![image](https://github.com/linggon-c0der/Google-Colaboratory-Python-/blob/main/202003200706.jpg)
 
+![image](https://github.com/linggon-c0der/Google-Colaboratory-Python-/blob/main/202003200701.jpg)
+
 # 於notebook (副檔名.ipynb)中任意加入code cell或text cell
 由於Colab是基於Jupyter Notebook發展出來的互動式環境，可以任意加入code cell(使用Python和其他語言編寫和執行代碼)或text cell(使用稱為markdown的簡單標記語言進行格式化筆記)。在下圖中，「下面的global變數x值是由上面這個cell得來，且不用再import函式庫，即可畫出Scatter Plot。」這段敘述是在Text cell中，同樣用點擊區塊方式進入編輯模式。新增這些cells方式也很簡單，將滑鼠移到cell的上方或下方皆可。
 
