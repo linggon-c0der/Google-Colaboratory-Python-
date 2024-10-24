@@ -77,18 +77,18 @@ plt.show()
 
 每一個code cell右上角都具有簡易工具列如下圖，最右邊的More cell actions中有Clear output功能，可快速清理output視窗。
 
-![image]
+![image](https://github.com/linggon-c0der/Google-Colaboratory-Python-/blob/main/202003200712.jpg)
 
 # Mounting Google Drive in your VM
 
 展開Colab notebook左邊的區域，google提供很多方便的Code snippets範例程式碼，我們挑選存取google雲端硬碟的範例實作。
 
-![image]
+![image](https://github.com/linggon-c0der/Google-Colaboratory-Python-/blob/main/202003200713.jpg)
 
 首先要mount上google drive，程式碼如下。
 這裡的設定需要綁定權限，請按照指示，連上google oauth2 URL後認證，並複製貼上你的authorization code。
 
-![image]
+![image](https://github.com/linggon-c0der/Google-Colaboratory-Python-/blob/main/202003200714.jpg)
 
 ```
 from google.colab import drive
@@ -97,7 +97,7 @@ drive.mount('/gdrive')
 
 當輸入驗證完成，會顯示Mounted at /gdrive，這就表示成功了。
 
-![image]
+![image](https://github.com/linggon-c0der/Google-Colaboratory-Python-/blob/main/202003200715.jpg)
 
 接著在”我的雲端硬碟”中新增檔案foo.txt，並列印出內容。程式碼及執行結果如下：
 
@@ -107,11 +107,11 @@ with open('/gdrive/My Drive/foo.txt', 'w') as f:
 !cat '/gdrive/My Drive/foo.txt'
 ```
 
-![image]
+![image](https://github.com/linggon-c0der/Google-Colaboratory-Python-/blob/main/202003200716.jpg)
 
 但我們其實應該到綁定google帳號的雲端硬碟去檢查，檔案是否真的寫入內容了。
 
-![image]
+![image](https://github.com/linggon-c0der/Google-Colaboratory-Python-/blob/main/202003200717.jpg)
 
 針對google drive的存取，也可以利用python的PyDrive函式庫簡化對Google Drive API的使用，相關範例如下：
 
@@ -136,7 +136,7 @@ uploaded.SetContentString('Sample upload file content 範例')
 uploaded.Upload()
 print('Uploaded file with ID {}'.format(uploaded.get('id')))
 ```
-![image]
+![image](https://github.com/linggon-c0der/Google-Colaboratory-Python-/blob/main/202003200718.jpg)
 
 因為會使用Google Cloud SDK，故執行時也會需要輸入驗證碼，此範例會傳回file ID供後續使用。
 接下來測試列出.txt檔案，因為在同一本notebook，上面的函式庫及參數可以直接應用：
@@ -160,7 +160,7 @@ downloaded = drive.CreateFile({'id': file_id})
 print('Downloaded content "{}"'.format(downloaded.GetContentString()))
 ```
 
-![image]
+![image](https://github.com/linggon-c0der/Google-Colaboratory-Python-/blob/main/2020032007019jpg)
 
 以上這些檔案操作練習讓我們了解如何使用google drive，之後我們便可將數據資料上傳，以供機器學習使用。
 以上這些檔案操作練習讓我們了解如何使用google drive，之後我們便可將數據資料上傳，以供機器學習使用。
