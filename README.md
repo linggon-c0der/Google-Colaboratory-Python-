@@ -38,6 +38,7 @@ plt.show()
 Colab有code IntelliSense功能，以上述範例來說，在前面兩行import完numpy等函式庫後，請先按下執行。接著再寫 x= numpy.random.n…編輯器會自動顯示代碼完成，參數信息，快速信息和成員列表等功能
 
 如圖:
+
 ![image](https://github.com/linggon-c0der/Google-Colaboratory-Python-/blob/main/202003200704.jpg)
 
 滑鼠移至code cell右上角RAM/Disk區域時，會顯示本次執行虛擬機所分配的資源：約12GB RAM，100GB Disk，如下圖。
