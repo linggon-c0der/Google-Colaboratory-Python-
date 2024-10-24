@@ -162,7 +162,7 @@ downloaded = drive.CreateFile({'id': file_id})
 print('Downloaded content "{}"'.format(downloaded.GetContentString()))
 ```
 
-![image](https://github.com/linggon-c0der/Google-Colaboratory-Python-/blob/main/2020032007019jpg)
+![image](202003200719.jpg)
 
 以上這些檔案操作練習讓我們了解如何使用google drive，之後我們便可將數據資料上傳，以供機器學習使用。
 以上這些檔案操作練習讓我們了解如何使用google drive，之後我們便可將數據資料上傳，以供機器學習使用。
