@@ -21,6 +21,7 @@
 
 點擊 code cell進入編輯模式並貼上這段python程式碼：
 
+```
 import numpy
 import matplotlib.pyplot as plt
 
@@ -28,6 +29,7 @@ x = numpy.random.normal(5.0, 1.0, 100000)
 
 plt.hist(x, 100)
 plt.show()
+```
 
 按下左側執行button 或CTRL+Enter。會看到正態分布直方圖結果如下：
 
@@ -53,10 +55,12 @@ Colab有code IntelliSense功能，以上述範例來說，在前面兩行import�
 
 接下來編輯執行第二個cell code，程式碼如下：
 
+```
 y = numpy.random.normal(10.0, 2.0, 1000)
 
 plt.scatter(x, y)
 plt.show()
+```
 
 得到錯誤訊息如下圖：
 
@@ -83,8 +87,10 @@ plt.show()
 
 ![image]
 
+```
 from google.colab import drive
 drive.mount('/gdrive')
+```
 
 當輸入驗證完成，會顯示Mounted at /gdrive，這就表示成功了。
 
@@ -92,9 +98,11 @@ drive.mount('/gdrive')
 
 接著在”我的雲端硬碟”中新增檔案foo.txt，並列印出內容。程式碼及執行結果如下：
 
+```
 with open('/gdrive/My Drive/foo.txt', 'w') as f:
   f.write('您好 Google Drive!')
 !cat '/gdrive/My Drive/foo.txt'
+```
 
 ![image]
 
