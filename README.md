@@ -17,7 +17,7 @@
 
 按下右下角 NEW PYTHON 3 NOTEBOOK，出現如下的cell code區域。
 
-![image](https://github.com/linggon-c0der/Google-Colaboratory-Python-/blob/main/202003200701.jpg)
+![image](https://github.com/linggon-c0der/Google-Colaboratory-Python-/blob/main/202003200702.jpg)
 
 點擊 code cell進入編輯模式並貼上這段python程式碼：
 
@@ -33,25 +33,25 @@ plt.show()
 
 按下左側執行button 或CTRL+Enter。會看到正態分布直方圖結果如下：
 
-![image](https://github.com/linggon-c0der/Google-Colaboratory-Python-/commit/57f8b52052edffe54c6883b703e38ae7f46bfd88)
+![image](https://github.com/linggon-c0der/Google-Colaboratory-Python-/blob/main/202003200703.jpg)
 
 Colab有code IntelliSense功能，以上述範例來說，在前面兩行import完numpy等函式庫後，請先按下執行。接著再寫 x= numpy.random.n…編輯器會自動顯示代碼完成，參數信息，快速信息和成員列表等功能
 
 如圖:
-![image]
+![image](https://github.com/linggon-c0der/Google-Colaboratory-Python-/blob/main/202003200704.jpg)
 
 滑鼠移至code cell右上角RAM/Disk區域時，會顯示本次執行虛擬機所分配的資源：約12GB RAM，100GB Disk，如下圖。
-![image]
+![image](https://github.com/linggon-c0der/Google-Colaboratory-Python-/blob/main/202003200705.jpg)
 
 # 版本比較Revision History
 點選工具列File -> Revision History，或直接於主工具列上按下All changes saved，有時會顯示Last saved at…(某時間點)。你會看到幾乎任何時間點的更動都被記錄下來，可以做檔案比較、選擇再次開啟歷史版本或復原版本。
 
-![image]
+![image](https://github.com/linggon-c0der/Google-Colaboratory-Python-/blob/main/202003200706.jpg)
 
 # 於notebook (副檔名.ipynb)中任意加入code cell或text cell
 由於Colab是基於Jupyter Notebook發展出來的互動式環境，可以任意加入code cell(使用Python和其他語言編寫和執行代碼)或text cell(使用稱為markdown的簡單標記語言進行格式化筆記)。在下圖中，「下面的global變數x值是由上面這個cell得來，且不用再import函式庫，即可畫出Scatter Plot。」這段敘述是在Text cell中，同樣用點擊區塊方式進入編輯模式。新增這些cells方式也很簡單，將滑鼠移到cell的上方或下方皆可。
 
-![image]
+![image](https://github.com/linggon-c0der/Google-Colaboratory-Python-/blob/main/202003200707.jpg)
 
 接下來編輯執行第二個cell code，程式碼如下：
 
@@ -64,13 +64,13 @@ plt.show()
 
 得到錯誤訊息如下圖：
 
-![image]
+![image](https://github.com/linggon-c0der/Google-Colaboratory-Python-/blob/main/202003200708.jpg)
 
 原來是x和y size必須相同。這是很容易修正的錯誤訊息，但是若一時看不出來問題在那兒呢？Colab在ValueError:下提供一個按鈕
 
-![image]，方便我們查詢網站stack overflow的相關解答，非常實用。修改後就可畫出正確分布圖形了：
+![image](https://github.com/linggon-c0der/Google-Colaboratory-Python-/blob/main/202003200709.jpg)，方便我們查詢網站stack overflow的相關解答，非常實用。修改後就可畫出正確分布圖形了：
 
-![image]
+![image](https://github.com/linggon-c0der/Google-Colaboratory-Python-/blob/main/202003200710.jpg)
 
 每一個code cell右上角都具有簡易工具列如下圖，最右邊的More cell actions中有Clear output功能，可快速清理output視窗。
 
