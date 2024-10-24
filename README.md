@@ -16,3 +16,5 @@
 ![image](https://github.com/linggon-c0der/Google-Colaboratory-Python-/blob/main/202003200701.jpg)
 
 按下右下角 NEW PYTHON 3 NOTEBOOK，出現如下的cell code區域。
+
+![https://github.com/linggon-c0der/Google-Colaboratory-Python-/blob/main/202003200701.jpg]
