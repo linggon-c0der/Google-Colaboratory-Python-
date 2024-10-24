@@ -130,20 +130,24 @@ print('Uploaded file with ID {}'.format(uploaded.get('id')))
 因為會使用Google Cloud SDK，故執行時也會需要輸入驗證碼，此範例會傳回file ID供後續使用。
 接下來測試列出.txt檔案，因為在同一本notebook，上面的函式庫及參數可以直接應用：
 
+```
 # List .txt files in the root.
 # Search query reference:
 # https://developers.google.com/drive/v2/web/search-parameters
 listed = drive.ListFile({'q': "title contains '.txt' and 'root' in parents"}).GetList()
 for file in listed:
   print('title {}, date {}, id {}'.format(file['title'], file['createdDate'], file['id']))
+```
 
   接下來測試下載特定檔案：
 
+```
 # Download a file based on its file ID.
 # A file ID looks like: laggVyWshwcyP6kEI-y_W3P8D26sz
 file_id = '填入你自己的file ID'
 downloaded = drive.CreateFile({'id': file_id})
 print('Downloaded content "{}"'.format(downloaded.GetContentString()))
+```
 
 ![image]
 
