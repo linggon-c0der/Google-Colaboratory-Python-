@@ -30,3 +30,5 @@ plt.hist(x, 100)
 plt.show()
 
 按下左側執行button 或CTRL+Enter。會看到正態分布直方圖結果如下：
+
+![image](https://github.com/linggon-c0der/Google-Colaboratory-Python-/commit/57f8b52052edffe54c6883b703e38ae7f46bfd88)
