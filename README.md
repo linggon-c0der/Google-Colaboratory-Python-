@@ -165,4 +165,66 @@ print('Downloaded content "{}"'.format(downloaded.GetContentString()))
 ![image](202003200719.jpg)
 
 以上這些檔案操作練習讓我們了解如何使用google drive，之後我們便可將數據資料上傳，以供機器學習使用。
+
+# 初探機器學習
+如之前所述，使用Colab完全不需自行安裝TensorFlow等函式庫，直接import即可。現在我們到工具列File->New Python 3 notebook，產生一個新筆記本ML1.ipynb。接著在工具列Runtime -> Change Runtime Type，選擇VM Hardware accelerator。提供的選項有None(由google 配置)、GPU(圖形處理器) 及TPU(張量處理器Tensor Processing Unit)。其中TPU是專為Google的深度學習框架TensorFlow而設計的人工智慧加速器專用積體電路。參考官方文件得知，目前一個虛擬機可提供最長12小時免費使用。在此我們選擇TPU來執行機器學習範例。
+
+我們考慮下面這組數據集，其實可以很快得到這個關係式 Y = 3X + 1。
+
+那麼該如何訓練神經網絡來完成上述關係式？在此應用了一個最簡單的神經網路模型：僅具有單層神經網路，該層具有1個神經元(units=1)，並且其輸入值為單個數據(input_shape=1)，也就是X的值，藉此模型來預測Y的值。
+
+編譯模型時須給入兩個非常關鍵的函數，它們會決定數據如何變化：
+損失函數(loss='mean_squared_error')
+優化函數(optimizer='sgd' 就是'stochastic gradient descent' )
+
+當機器學習進行訓練時，其中損失函數用來計算這個模型的優劣，之後模型再用優化函數形成新的猜測。本例中，模型會將X不斷帶入Y中並經過100次循環(epochs=100)猜測一個值，然後決定模型的好壞。即使我們現在還不了解數學上的定義也沒關係，因為接下來你會看見真的有用。
+
+請加入這段程式碼並執行：
+
+```
+import tensorflow as tf
+import numpy as np
+from tensorflow import keras
+
+model = tf.keras.Sequential([keras.layers.Dense(units=1, input_shape=[1])])
+model.compile(optimizer='sgd', loss='mean_squared_error')
+
+xs = np.array([-1.0, 0.0, 1.0, 2.0, 3.0, 4.0], dtype=float)
+ys = np.array([-2.0, 1.0, 4.0, 7.0, 10.0, 13.0], dtype=float)
+# 以上code定義此neural network
+
+model.fit(xs, ys, epochs=100)
+```
+
+可以看到輸出結果Train on 6 samples及隨著次數增多，越來越低的loss value。到訓練結束時，loss非常小約等於0.0150，表明我們的模型在推斷數字之間的關係方面做得很好。
+
+到此我們先暫停一下，畫張圖：利用線性回歸使用數據點之間的關係，在所有數據點之間畫一條直線。這條線可以用來預測未來值。程式碼如下：
+
+```
+import matplotlib.pyplot as plt
+from scipy import stats
+slope, intercept, r, p, std_err = stats.linregress(xs, ys)
+
+def myfunc(v):
+  return slope * v + intercept
+
+mymodel = list(map(myfunc, xs))
+plt.scatter(xs,ys,6)
+plt.plot(xs, mymodel)
+plt.show()
+```
+
+執行輸出結果如下圖：
+
+若X=10.0，我們應該很快就認為Y的值是31，那麼來看看經過學習後機器預測的結果吧。
+
+```
+print(model.predict([10.0]))
+```
+
+結果並不是31，而是30.642574，非常接近31。為什麼呢？因為Neural Networks處理的是機率，在這個例子中只有6對數據，模型只能預測有很高的機率會是直線方程Y = 3X + 1，但不一定，所以機器學習將這個不確定性融入預測中。
+
+本文從Google Colab環境開始介紹，文章後半段則跟大家一起初探Hello World等級的機器學習。撰文的主因是最近太常看到人工智慧及機器學習等相關新聞及討論，尤其在學完芬蘭的免費AI線上課程後，特別想了解如何寫程式應用或做相關研究。當我們發現Colab可方便使用Python及TensorFlow時，真心覺得應該推廣給每個人。
+
+
 <h2>參考資料:https://www.cc.ntu.edu.tw/chinese/epaper/0052/20200320_5207.html</h2>
