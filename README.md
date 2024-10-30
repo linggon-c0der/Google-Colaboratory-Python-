@@ -42,6 +42,7 @@ Colab有code IntelliSense功能，以上述範例來說，在前面兩行import�
 ![image](https://github.com/linggon-c0der/Google-Colaboratory-Python-/blob/main/202003200704.jpg)
 
 滑鼠移至code cell右上角RAM/Disk區域時，會顯示本次執行虛擬機所分配的資源：約12GB RAM，100GB Disk，如下圖。
+
 ![image](https://github.com/linggon-c0der/Google-Colaboratory-Python-/blob/main/202003200705.jpg)
 
 # 版本比較Revision History
@@ -169,7 +170,11 @@ print('Downloaded content "{}"'.format(downloaded.GetContentString()))
 # 初探機器學習
 如之前所述，使用Colab完全不需自行安裝TensorFlow等函式庫，直接import即可。現在我們到工具列File->New Python 3 notebook，產生一個新筆記本ML1.ipynb。接著在工具列Runtime -> Change Runtime Type，選擇VM Hardware accelerator。提供的選項有None(由google 配置)、GPU(圖形處理器) 及TPU(張量處理器Tensor Processing Unit)。其中TPU是專為Google的深度學習框架TensorFlow而設計的人工智慧加速器專用積體電路。參考官方文件得知，目前一個虛擬機可提供最長12小時免費使用。在此我們選擇TPU來執行機器學習範例。
 
+![image](https://github.com/linggon-c0der/Google-Colaboratory-Python-/blob/main/202003200720.jpg)
+
 我們考慮下面這組數據集，其實可以很快得到這個關係式 Y = 3X + 1。
+
+![image](https://github.com/linggon-c0der/Google-Colaboratory-Python-/blob/main/202003200721.jpg)
 
 那麼該如何訓練神經網絡來完成上述關係式？在此應用了一個最簡單的神經網路模型：僅具有單層神經網路，該層具有1個神經元(units=1)，並且其輸入值為單個數據(input_shape=1)，也就是X的值，藉此模型來預測Y的值。
 
@@ -198,6 +203,8 @@ model.fit(xs, ys, epochs=100)
 
 可以看到輸出結果Train on 6 samples及隨著次數增多，越來越低的loss value。到訓練結束時，loss非常小約等於0.0150，表明我們的模型在推斷數字之間的關係方面做得很好。
 
+![image](https://github.com/linggon-c0der/Google-Colaboratory-Python-/blob/main/202003200722.jpg)
+
 到此我們先暫停一下，畫張圖：利用線性回歸使用數據點之間的關係，在所有數據點之間畫一條直線。這條線可以用來預測未來值。程式碼如下：
 
 ```
@@ -215,6 +222,8 @@ plt.show()
 ```
 
 執行輸出結果如下圖：
+
+![image](https://github.com/linggon-c0der/Google-Colaboratory-Python-/blob/main/202003200723.jpg)
 
 若X=10.0，我們應該很快就認為Y的值是31，那麼來看看經過學習後機器預測的結果吧。
 
