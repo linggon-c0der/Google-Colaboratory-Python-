@@ -1,5 +1,5 @@
 # Google Colaboratory適合Python初學者的雲端開發環境
-南華大學跨領域-人工智慧期中報告 11218122 李冠霖
+南華大學跨領域-人工智慧期中報告 11218122 李冠霖 10924251 林旂宇
 # Colaboratory簡介
 
 此文章在介紹Google Colaboratory的開發環境與解釋下Hello World等級的機器學習操作過程。
@@ -165,4 +165,4 @@ print('Downloaded content "{}"'.format(downloaded.GetContentString()))
 ![image](202003200719.jpg)
 
 以上這些檔案操作練習讓我們了解如何使用google drive，之後我們便可將數據資料上傳，以供機器學習使用。
-以上這些檔案操作練習讓我們了解如何使用google drive，之後我們便可將數據資料上傳，以供機器學習使用。
+<h2>參考資料:https://www.cc.ntu.edu.tw/chinese/epaper/0052/20200320_5207.html</h2>
