@@ -231,7 +231,21 @@ plt.show()
 print(model.predict([10.0]))
 ```
 
-結果並不是31，而是30.642574，非常接近31。為什麼呢？因為Neural Networks處理的是機率，在這個例子中只有6對數據，模型只能預測有很高的機率會是直線方程Y = 3X + 1，但不一定，所以機器學習將這個不確定性融入預測中。
+![image](https://github.com/linggon-c0der/Google-Colaboratory-Python-/blob/main/202003200724.jpg)
+
+結果出現了錯誤，原因是因為predict的方法通常期望輸入是一個二維的數據結構，是一個包含多個特徵的多行陣列，但[10.0]是一維的列表。
+
+所以我們的解決方法是將[10.0]轉換為二維數據結構讓程式成立條件。
+
+```
+# 將數據轉換為 2D 結構
+input_data = np.array([[10.0]])
+print(model.predict(input_data))
+```
+
+![image](https://github.com/linggon-c0der/Google-Colaboratory-Python-/blob/main/202003200725.jpg)
+
+結果並不是31，而是31.094072，非常接近31。為什麼呢？因為Neural Networks處理的是機率，在這個例子中只有6對數據，模型只能預測有很高的機率會是直線方程Y = 3X + 1，但不一定，所以機器學習將這個不確定性融入預測中。
 
 本文從Google Colab環境開始介紹，文章後半段則跟大家一起初探Hello World等級的機器學習。撰文的主因是最近太常看到人工智慧及機器學習等相關新聞及討論，尤其在學完芬蘭的免費AI線上課程後，特別想了解如何寫程式應用或做相關研究。當我們發現Colab可方便使用Python及TensorFlow時，真心覺得應該推廣給每個人。
 
