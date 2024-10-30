@@ -250,4 +250,4 @@ print(model.predict(input_data))
 本文從Google Colab環境開始介紹，文章後半段則跟大家一起初探Hello World等級的機器學習。撰文的主因是最近太常看到人工智慧及機器學習等相關新聞及討論，尤其在學完芬蘭的免費AI線上課程後，特別想了解如何寫程式應用或做相關研究。當我們發現Colab可方便使用Python及TensorFlow時，真心覺得應該推廣給每個人。
 
 
-<h2>參考資料:https://www.cc.ntu.edu.tw/chinese/epaper/0052/20200320_5207.html</h2>
+<h2>參考資料 : https://www.cc.ntu.edu.tw/chinese/epaper/0052/20200320_5207.html</h2>
